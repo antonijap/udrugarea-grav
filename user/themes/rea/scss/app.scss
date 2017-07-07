@@ -1,8 +1,9 @@
 @charset 'utf-8';
 
+
+@import '../bower_components/foundation-sites/scss/foundation';
+@import '../bower_components/motion-ui/motion-ui';
 @import 'settings';
-@import 'foundation';
-@import 'motion-ui';
 
 @include foundation-global-styles;
 //@include foundation-grid;
@@ -67,11 +68,6 @@ $browser-context: 18;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .02em;
-
-  @include breakpoint(large) {
-    padding: 1.2em 2em;
-    min-width: em(160);
-  }
 }
 
 .intro {
@@ -205,11 +201,8 @@ $browser-context: 18;
 
 
 .single-animal {
-  @include breakpoint(large) {
-    max-width: 60%;
-    margin: 3em auto 0;
-  }
-
+  max-width: 90%;
+  margin: 2em auto 0;
 
   h1 {
     font-weight: 700;
@@ -229,14 +222,16 @@ $browser-context: 18;
   p {
     margin-top: 2em 0;
   }
-}
 
-.single-page {
   @include breakpoint(large) {
     max-width: 60%;
     margin: 3em auto 0;
   }
+}
 
+.single-page {
+  max-width: 90%;
+  margin: 2em auto 0;
 
   h1 {
     font-weight: 700;
@@ -270,6 +265,11 @@ $browser-context: 18;
 
   p {
     margin-top: 2em 0;
+  }
+
+  @include breakpoint(large) {
+    max-width: 60%;
+    margin: 3em auto 0;
   }
 }
 
