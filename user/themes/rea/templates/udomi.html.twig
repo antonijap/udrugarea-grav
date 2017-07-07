@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+
+  <div class="single-page">
+    <!-- Intro Udomi -->
+    <div class="grid-x">
+      <div class="small-12 cell">
+        {% include 'partials/breadcrumbs.html.twig' %}
+        <h1>{{ page.title }}</h1>
+        <h2>{{ page.header.intro }}</h2>
+        <p>{{ page.content }}</p>
+      </div>
+    </div>
+
+    <!-- Udomi -->
+    <div class="grid-x grid-margin-x gallery">
+      {% block udomi %}
+      {% set collection = page.collection() %}
+      {% for page in collection %}
+      <div class="small-12 medium-6 large-4 cell">
+        <a href="{{ page.url }}">
+          <img class="thumb" src="{{ page.header.thumbnail }}" alt="{{ page.title }}">
+        </a>
+
+      </div>
+      {% endfor %}
+      {% endblock %}
+    </div>
+  </div>
+
+
+{% endblock %}

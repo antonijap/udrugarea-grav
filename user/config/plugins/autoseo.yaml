@@ -1,0 +1,7 @@
+enabled: false
+description:
+  enabled: true
+  length: 30
+keyword:
+  enabled: true
+  length: 20

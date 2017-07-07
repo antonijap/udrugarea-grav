@@ -1,0 +1,14 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+  <div class="single-animal">
+    <div class="grid-x">
+      <div class="cell">
+        {% include 'partials/breadcrumbs.html.twig' %}
+        <h1>{{ page.title }}</h1>
+        <h2>{{ page.header.intro }}</h2>
+        <p>{{ page.content }}</p>
+      </div>
+    </div>
+  </div>
+{% endblock %}

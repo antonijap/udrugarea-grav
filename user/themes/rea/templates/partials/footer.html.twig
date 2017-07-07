@@ -1,0 +1,32 @@
+{% block footer %}
+{% block javascripts %}
+<script
+src="https://code.jquery.com/jquery-3.2.1.min.js"
+integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+crossorigin="anonymous"></script>
+{% do assets.addJs('theme://js/app.js', 100) %}
+{% endblock %}
+{{ assets.js() }}
+
+<footer>
+  <div class="grid-x dark">
+    <div class="shrink cell">
+      <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2Fudrugarea%2F&amp;tabs&amp;width=340&amp;height=214&amp;small_header=false&amp;adapt_container_width=true&amp;hide_cover=false&amp;show_facepile=true&amp;appId=1756966864551559" width="340" height="214" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowtransparency="true"></iframe>
+    </div>
+
+    <div class="shrink cell">
+      <h4>Podaci udruge</h4>
+      <p>OIB: 36184214466</p>
+      <p>Registarski broj: 01002887</p>
+      <p>IBAN: HR6024030091121002275 (donacije)</p>
+      <p>Kontakt: info@udrugarea.hr</p>
+    </div>
+
+    <div class="shrink cell show-for-large">
+      <h4>Development & dizajn</h4>
+      <p><a href="http://antonijapek.com" target="_blank">Antonija Pek</a></p>
+      <p>Udruge bez stranice slobodno se javite</p>
+    </div>
+  </div>
+</footer>
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+<div class="intro">
+    <div class="grid-x">
+        <div class="small-12 cell">
+            <img src="images/logo.svg" class="logo" alt="Udruga Rea">
+        </div>
+        <div class="small-12 cell">
+            <h1>Rea</h1>
+        </div>
+        <div class="cell">
+            <h2>Udruga Rea je registrirana neprofitna nevladina organizacija, skupina volontera čiji je cilj udomljavanje napuštenih pasa i mačaka grada Samobora i okolice.</h2>
+        </div>
+        <div class="cell" style="margin-top: 2.5em;">
+            <a href="/udomi" class="button text-center">Udomi</a>
+            <a href="/doniraj" class="hollow button text-center">Doniraj</a>
+        </div>
+    </div>
+</div>
+
+<div class="grid-x dark align-justify align-middle">
+    <div class="small-12 medium-12 large-4 cell info-box">
+        <h3>Postani kuma ili kum</h3>
+        <p>Idealno za one koji ne mogu udomiti, a žele pomoći.</p>
+        <a href="kumstvo" class="hollow button">Želim biti kuma</a>
+
+        <h3>Tražimo čuvalice</h3>
+        <p>Nemamo sklonište, ovisimo o čuvalicama. Udruga osigurava sve što je potrebno za našeg štićenika.</p>
+        <a href="cuvalice" class="hollow button">Želim biti čuvalica</a>
+    </div>
+
+    <div class="auto cell show-for-large align-self-stretch">
+        <img src="/images/pets.jpg" alt="Images">
+    </div>
+</div>
+
+<section id="udomljavanje">
+  <div class="grid-container udomi">
+    <!-- Intro Udomi -->
+    <div class="grid-x">
+      <div class="small-12 cell">
+        <h3>Pronađi svog novog najboljeg prijatelja</h3>
+      </div>
+
+      <div class="small-12 large-8 cell">
+        <p>
+          Ovdje možete vidjeti naše predivne peseke i mace. Kako bismo osigurali maksimalno adekvatan novi dom za naše štićenike pripremili smo ugovor koji se potpisuje prilikom udomljavanja. Ukoliko imaš bilo kakva pitanja slobodno <a href="mailto:info@udrugarea.hr?subject=Upit">nam se javi</a>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Udomi -->
+    <div class="grid-x grid-margin-x gallery">
+        {% block udomi %}
+        {% set collection = page.collection() %}
+        {% for page in collection %}
+        <div class="small-12 medium-6 large-4 cell">
+          <a href="{{ page.url }}">
+              <img class="thumb" src="{{ page.header.thumbnail }}" alt="{{ page.title }}">
+          </a>
+
+        </div>
+        {% endfor %}
+        {% endblock %}
+    </div>
+  </div>
+
+</section>
+{% endblock %}
