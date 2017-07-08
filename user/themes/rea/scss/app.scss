@@ -219,6 +219,13 @@ $browser-context: 18;
     font-weight: 700;
   }
 
+  h3 {
+    margin-top: 3em;
+    @include breakpoint(large) {
+      font-size: 1.5em;
+    }
+  }
+
   p {
     margin-top: 2em 0;
   }

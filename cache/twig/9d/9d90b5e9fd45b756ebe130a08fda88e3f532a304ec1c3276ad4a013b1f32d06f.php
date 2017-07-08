@@ -40,9 +40,10 @@ class __TwigTemplate_0d608f5580099cdd62e14a9e085c90bf9f2b100af4032650d27ce6a21e1
         // line 29
         $this->displayBlock('content', $context, $blocks);
         // line 31
-        echo "
-  ";
+        echo "  ";
+        $this->loadTemplate("partials/analytics.html.twig", "base.html.twig", 31)->display($context);
         // line 32
+        echo "  ";
         $this->loadTemplate("partials/footer.html.twig", "base.html.twig", 32)->display($context);
         // line 33
         echo "</body>
@@ -119,7 +120,7 @@ class __TwigTemplate_0d608f5580099cdd62e14a9e085c90bf9f2b100af4032650d27ce6a21e1
 
     public function getDebugInfo()
     {
-        return array (  107 => 30,  104 => 29,  100 => 21,  97 => 20,  94 => 19,  86 => 22,  84 => 19,  81 => 18,  78 => 17,  75 => 16,  73 => 15,  68 => 13,  64 => 12,  57 => 7,  54 => 6,  48 => 33,  46 => 32,  43 => 31,  41 => 29,  35 => 25,  33 => 6,  27 => 3,  24 => 2,  22 => 1,);
+        return array (  108 => 30,  105 => 29,  101 => 21,  98 => 20,  95 => 19,  87 => 22,  85 => 19,  82 => 18,  79 => 17,  76 => 16,  74 => 15,  69 => 13,  65 => 12,  58 => 7,  55 => 6,  49 => 33,  46 => 32,  43 => 31,  41 => 29,  35 => 25,  33 => 6,  27 => 3,  24 => 2,  22 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -162,7 +163,7 @@ class __TwigTemplate_0d608f5580099cdd62e14a9e085c90bf9f2b100af4032650d27ce6a21e1
 <body>
   {% block content %}
   {% endblock %}
-
+  {% include 'partials/analytics.html.twig' %}
   {% include 'partials/footer.html.twig' %}
 </body>
 </html>
